@@ -98,6 +98,6 @@ Very much like the linux, but if you have installed gfortran via `homebrew <http
 (`brew install gcc`) then you may need to tell the makefile where to 
 find the libraries::
 
-    $ export LIBRARY_PATH=$(dirname `gfortran -print-libgcc-file-name`)
+    $ export LIBRARY_PATH=$(dirname $(gfortran -print-file-name=libgfortran.a))
     $ make
     $ make install
