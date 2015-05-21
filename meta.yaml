@@ -26,9 +26,8 @@ test:
     - test.py
   imports:
     - pydqed
-    - pydqed.DQED
   commands:
-    - $PYTHON test.py
+    - python test.py
 
 about:
   home: http://github.com/GreenGroup/PyDQED
