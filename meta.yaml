@@ -1,0 +1,36 @@
+# For conda build
+package:
+  name: pydqed
+  version: "0.1.0"
+
+source:
+  path: .
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc # [unix]
+    - python
+    - setuptools
+    - cython ==0.21
+    - numpy
+  run:
+    - libgcc # [unix]
+    - python
+    - numpy
+
+test:
+  files:
+    - test.py
+  imports:
+    - pydqed
+    - pydqed.DQED
+  commands:
+    - $PYTHON test.py
+
+about:
+  home: http://github.com/GreenGroup/PyDQED
+  license: MIT
+  summary: "A Python wrapper to the DQED bounded constrained nonlinear optimization code."
