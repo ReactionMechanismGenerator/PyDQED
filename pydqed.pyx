@@ -45,6 +45,7 @@ import numpy
 cimport numpy
 cimport cython
 
+__version__ = '1.0.0'
 ################################################################################
 
 # Expose the (double-precision) DQED function prototype to this module
