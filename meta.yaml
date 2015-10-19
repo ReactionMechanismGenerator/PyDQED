@@ -13,14 +13,14 @@ build:
 requirements:
   build:
     - gcc # [unix]
-    - python
+    - python 2.7* # for compatibility with RDKit
     - setuptools
     - cython ==0.21
-    - numpy
+    - numpy 1.9* # for compatibility with RDKit
   run:
     - libgcc # [unix]
-    - python
-    - numpy
+    - python 2.7* # for compatibility with RDKit
+    - numpy 1.9* # for compatibility with RDKit
 
 test:
   files:
