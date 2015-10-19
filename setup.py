@@ -48,9 +48,11 @@ ext_modules = [
     ),
 ]
 
+# Read the version number
+exec(open('version.py').read())
 # Run the setup command
 setup(name='PyDQED',
-    version='1.0.0',
+    version=__version__,
     description='A Python wrapper to the DQED bounded constrained nonlinear optimization code',
     author='Joshua W. Allen',
     author_email='joshua.w.allen@gmail.com',
