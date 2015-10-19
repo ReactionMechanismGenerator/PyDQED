@@ -18,18 +18,17 @@ install:
 
 DQED: libdqed.a
 
-libdqed.a: build/dqed.o
-	ar rcs libdqed.a build/dqed.o
+libdqed.a: dqed.o
+	ar rcs libdqed.a dqed.o
 
-build/dqed.o: dqed.f90
-	mkdir -p build
-	$(F90) $(CFLAGS) -c dqed.f90 -o build/dqed.o
+dqed.o: dqed.f90
+	$(F90) $(CFLAGS) -c dqed.f90 -o dqed.o
 
 clean: clean-DQED clean-cython
 	rm -rf build
 
 clean-DQED:
-	rm build/dqed.o libdqed.a
+	rm dqed.o libdqed.a
 
 clean-cython:
 	python setup.py clean --build-temp build

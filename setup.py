@@ -44,7 +44,7 @@ ext_modules = [
         ['pydqed.pyx'], 
         include_dirs=['.', numpy.get_include()], 
         libraries=['gfortran'], 
-        extra_objects=['build/dqed.o'],
+        extra_objects=['dqed.o'],
     ),
 ]
 
