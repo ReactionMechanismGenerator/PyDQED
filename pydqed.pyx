@@ -44,7 +44,8 @@ import math
 import numpy
 cimport numpy
 cimport cython
-from .version import __version__
+
+exec(open('version.py').read())
 
 ################################################################################
 
