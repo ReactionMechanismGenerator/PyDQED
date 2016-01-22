@@ -28,11 +28,11 @@ clean: clean-DQED clean-cython
 	rm -rf build
 
 clean-DQED:
-	rm dqed.o libdqed.a
+	rm -f dqed.o libdqed.a
 
 clean-cython:
 	python setup.py clean --build-temp build
-	rm -f *.so *.pyc
+	rm -f *.so *.pyc *.o *.c *.html
 
 help:
 	@echo ""

@@ -9,3 +9,4 @@ ar rcs libdqed.a dqed.o
 "%PYTHON%" setup.py install
 
 
+"%PYTHON%" -c "from pydqed import __version__; print __version__" > "%SRC_DIR%/__conda_version__.txt"
