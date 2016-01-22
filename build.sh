@@ -4,3 +4,5 @@ export F77=${PREFIX}/bin/gfortran
 export F90=${PREFIX}/bin/gfortran
 make
 $PYTHON setup.py install
+
+$PYTHON -c 'from pydqed import __version__; print __version__' > ${SRC_DIR}/__conda_version__.txt

@@ -1,7 +1,7 @@
 # For conda build
 package:
   name: pydqed
-  version: "1.0.0"
+  version: "0" # set by build.sh which gets it from the module
 
 source:
   path: .
