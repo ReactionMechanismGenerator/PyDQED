@@ -64,6 +64,26 @@ PyDQED.**
 Installation
 ============
 
+Anaconda Binary (Recommended)
+-----------------------------
+
+There is no need to install dependencies with this method. You will automatically install the latest binary package for PyDQED.
+
+* Download and install the `Anaconda Python Platform <http://continuum.io/downloads>`_ for Python 2.7 (make sure not to install Python 3.0+, which is incompatible with RMG). When prompted to append Anaconda to your PATH, select or type Yes.
+
+* It is safest to install the PyDQED binary onto a fresh Anaconda envrionment via the Terminal or Command Prompt ::
+
+    conda create -c rmg --name pydqed_env pydqed
+
+* (For unix-based systems) To use it you must first activate the environment by typing ::
+
+    source activate pydqed_env
+
+* (For Windows) To use it you must first activate the environment by typing ::
+    
+    activate pydqed_env
+
+
 Windows
 -------
 
