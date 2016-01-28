@@ -5,7 +5,6 @@ PyDQED Documentation
     :maxdepth: 2
 
     users/index
-    developers/index
 
 * :ref:`genindex`
 * :ref:`modindex`
