@@ -75,7 +75,7 @@ There is no need to install dependencies with this method. You will automaticall
 
     conda create -c rmg --name pydqed_env pydqed
 
-* (For unix-based systems) To use it you must first activate the environment by typing ::
+* (For Unix-based systems) To use it you must first activate the environment by typing ::
 
     source activate pydqed_env
 
