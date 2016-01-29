@@ -13,6 +13,7 @@ build:
 requirements:
   build:
     - gcc # [unix]
+    - gcc ==4.8.2 # [linux32]
     - python 2.7* # for compatibility with RDKit
     - setuptools
     - cython ==0.21
