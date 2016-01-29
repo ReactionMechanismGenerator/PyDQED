@@ -13,4 +13,12 @@ export F90=${PREFIX}/bin/gfortran
 make
 $PYTHON setup.py install
 
+# uncomment the following lines to get the build to work in Mac OSX El Capitan, due to new issues relating to rpath
+
+# install_name_tool -change @rpath/libgfortran.3.dylib ${PREFIX}/lib/libgfortran.3.dylib ${PREFIX}/lib/python2.7/site-packages/pydqed.so
+# install_name_tool -change @rpath/libgfortran.3.dylib ${PREFIX}/lib/libgfortran.3.dylib ${SRC_DIR}/pydqed.so
+
+# install_name_tool -change @rpath/./libquadmath.0.dylib ${PREFIX}/lib/libquadmath.0.dylib ${PREFIX}/lib/python2.7/site-packages/pydqed.so
+# install_name_tool -change @rpath/./libquadmath.0.dylib ${PREFIX}/lib/libquadmath.0.dylib ${SRC_DIR}/pydqed.so
+
 $PYTHON -c 'from pydqed import __version__; print __version__' > ${SRC_DIR}/__conda_version__.txt
