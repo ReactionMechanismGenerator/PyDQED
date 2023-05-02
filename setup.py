@@ -35,27 +35,29 @@ from Cython.Distutils import build_ext
 
 # Turn on HTML annotation file generation
 import Cython.Compiler.Options
+
 Cython.Compiler.Options.annotate = True
 
 # The Cython extension modules to compile
 ext_modules = [
     Extension(
-        'pydqed', 
-        ['pydqed.pyx'], 
-        include_dirs=['.', numpy.get_include()], 
-        libraries=['gfortran','quadmath'], 
-        extra_objects=['dqed.o'],
+        "pydqed",
+        ["pydqed.pyx"],
+        include_dirs=[".", numpy.get_include()],
+        libraries=["gfortran", "quadmath"],
+        extra_objects=["dqed.o"],
     ),
 ]
 
 # Run the setup command
-setup(name='PyDQED',
-    version='1.0.1',
-    description='A Python wrapper to the DQED bounded constrained nonlinear optimization code',
-    author='Joshua W. Allen and the Reaction Mechanism Generator Team',
-    author_email='rmg_dev@mit.edu',
-    url='http://github.com/ReactionMechanismGenerator/PyDQED/',
-    py_modules=['pydqed'],
-    cmdclass = {'build_ext': build_ext},
-    ext_modules = ext_modules
+setup(
+    name="PyDQED",
+    version="1.0.3",
+    description="A Python wrapper to the DQED bounded constrained nonlinear optimization code",
+    author="Joshua W. Allen and the Reaction Mechanism Generator Team",
+    author_email="rmg_dev@mit.edu",
+    url="http://github.com/ReactionMechanismGenerator/PyDQED/",
+    py_modules=["pydqed"],
+    cmdclass={"build_ext": build_ext},
+    ext_modules=ext_modules,
 )
