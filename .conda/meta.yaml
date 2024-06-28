@@ -35,4 +35,4 @@ test:
 about:
   home: http://github.com/ReactionMechanismGenerator/PyDQED
   license: MIT
-  summary: "A Python wrapper to the DQED bounded constrained nonlinear optimization code."
+  summary: "Python wrapper to the DQED bounded constrained nonlinear optimization code."
