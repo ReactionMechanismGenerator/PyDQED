@@ -5,7 +5,7 @@
 ################################################################################
 
 
-CFLAGS=-fPIC -fallow-argument-mismatch -O3
+CFLAGS=-fPIC -std=legacy -O3
 
 all: DQED cython
 
