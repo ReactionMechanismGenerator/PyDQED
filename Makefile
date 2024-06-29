@@ -11,7 +11,7 @@ FFLAGS=-fallow-argument-mismatch
 all: DQED cython
 
 cython:
-	pip install . --no-deps --target=. --build build
+	pip install -e .
 
 install:
 	pip install .

@@ -2,5 +2,5 @@
 make
 
 # Build cython wrapper
-make install
+make cython
 
