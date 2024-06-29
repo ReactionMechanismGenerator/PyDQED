@@ -52,7 +52,7 @@ ext_modules = [
 # Run the setup command
 setup(
     name="PyDQED",
-    version="1.0.3",
+    version="1.0.4",
     description="A Python wrapper to the DQED bounded constrained nonlinear optimization code",
     author="Joshua W. Allen and the Reaction Mechanism Generator Team",
     author_email="rmg_dev@mit.edu",

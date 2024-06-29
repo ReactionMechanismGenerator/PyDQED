@@ -2,7 +2,7 @@
 ## Python wrapper for the DQED constrained nonlinear optimization code
 
 > [!WARNING]  
-> PyDQED is currently abandonware. The ReactionMechanismGenerator organization no longer has developers capable of maintaining it.
+> PyDQED is no longer receiving updates. The ReactionMechanismGenerator organization has no developers capable of maintaining it.
 
 The usage documentation is still relevant but no new updates will be released and we are unable to fix any bugs.
 We will continue to release conda packages for PyDQED as long as possible.
