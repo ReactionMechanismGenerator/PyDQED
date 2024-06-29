@@ -11,10 +11,10 @@ FFLAGS=-fallow-argument-mismatch
 all: DQED cython
 
 cython:
-	python setup.py build_ext --build-lib . --build-temp build
+	pip install . --no-deps --target=. --build build
 
 install:
-	python setup.py install
+	pip install .
 
 DQED: libdqed.a
 
@@ -31,8 +31,7 @@ clean-DQED:
 	rm -f dqed.o libdqed.a
 
 clean-cython:
-	python setup.py clean --build-temp build
-	rm -f *.so *.pyc *.o *.c *.html
+	rm -rf *.so *.pyc *.o *.c *.html build
 
 help:
 	@echo ""

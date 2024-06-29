@@ -8,8 +8,9 @@ The usage documentation is still relevant but no new updates will be released an
 We will continue to release conda packages for PyDQED as long as possible.
 
 To build PyDQED, clone this repository, install the dependencies (find them with `conda search -c rmg PyDQED`), upgrade whichever are causing problems, then navigate to the `.conda` directory and run `conda build .`.
+Installation instructions in the documentation directory are _not_ up to date.
 
-What follows is the original content of the README, slighly updated to removed erroneous instructions and dead links.
+What follows is the original content of the README, slightly updated to removed erroneous instructions and dead links.
 
 # Introduction
 
@@ -48,5 +49,5 @@ make
 This command will build PyDQED in-place, rather than installing it to your Python package directory.
 If you wish to formally install PyDQED, run the following command from the base package directory after the `make` command (you may need root privileges for this):
 ```
-python setup.py install
+pip install .
 ```
