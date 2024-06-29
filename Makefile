@@ -5,7 +5,8 @@
 ################################################################################
 
 
-CFLAGS=-fPIC -std=legacy -O3
+CFLAGS=-fPIC -O3
+FFLAGS=-fallow-argument-mismatch
 
 all: DQED cython
 
@@ -21,7 +22,7 @@ libdqed.a: dqed.o
 	ar rcs libdqed.a dqed.o
 
 dqed.o: dqed.f90
-	$(F90) $(CFLAGS) -c dqed.f90 -o dqed.o
+	$(F90) $(CFLAGS) $(FFLAGS) -c dqed.f90 -o dqed.o
 
 clean: clean-DQED clean-cython
 	rm -rf build
