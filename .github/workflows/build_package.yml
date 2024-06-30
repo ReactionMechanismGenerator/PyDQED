@@ -61,6 +61,7 @@ jobs:
           : "${CONDA_TOKEN:=${{ secrets.ANACONDA_TOKEN }}}"
           : "${CONDA_TOKEN:=default_value}"
           echo "CONDA_TOKEN=$CONDA_TOKEN" >> $GITHUB_ENV
+          conda config --add channels conda-forge
           CONDA_NPY=${{ matrix.numpy-version }} CONDA_PY=${{ matrix.python-version }} conda build --token $CONDA_TOKEN --user rmg .
   result:
     if: ${{ always() }}
