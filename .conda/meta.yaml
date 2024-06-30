@@ -1,13 +1,13 @@
 # For conda build
 package:
   name: pydqed
-  version: '1.0.3'
+  version: '1.0.4'
 
 source:
   path: ../
 
 build:
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  string: py{{ CONDA_PY }}h{{ PKG_HASH }}npy{{ NPY_VER }}_{{ PKG_BUILDNUM }}
  
 
 requirements:
@@ -35,4 +35,4 @@ test:
 about:
   home: http://github.com/ReactionMechanismGenerator/PyDQED
   license: MIT
-  summary: "A Python wrapper to the DQED bounded constrained nonlinear optimization code."
+  summary: "Python wrapper to the DQED bounded constrained nonlinear optimization code."

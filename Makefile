@@ -5,15 +5,16 @@
 ################################################################################
 
 
-CFLAGS=-fPIC -fallow-argument-mismatch -O3
+CFLAGS=-fPIC -O3
+FFLAGS=-fallow-argument-mismatch
 
 all: DQED cython
 
 cython:
-	python setup.py build_ext --build-lib . --build-temp build --pyrex-c-in-temp
+	pip install -e .
 
 install:
-	python setup.py install
+	pip install .
 
 DQED: libdqed.a
 
@@ -21,7 +22,7 @@ libdqed.a: dqed.o
 	ar rcs libdqed.a dqed.o
 
 dqed.o: dqed.f90
-	$(F90) $(CFLAGS) -c dqed.f90 -o dqed.o
+	$(F90) $(CFLAGS) $(FFLAGS) -c dqed.f90 -o dqed.o
 
 clean: clean-DQED clean-cython
 	rm -rf build
@@ -30,8 +31,7 @@ clean-DQED:
 	rm -f dqed.o libdqed.a
 
 clean-cython:
-	python setup.py clean --build-temp build
-	rm -f *.so *.pyc *.o *.c *.html
+	rm -rf *.so *.pyc *.o *.c *.html build
 
 help:
 	@echo ""
